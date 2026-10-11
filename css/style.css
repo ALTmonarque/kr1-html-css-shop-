@@ -244,25 +244,30 @@ footer {
   border-left: 4px solid #168a2f;
   background-color: #eefaf0;
 }
+.breadcrumbs {
+  max-width: var(--container-width);
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
+  margin: 0 auto var(--space-md);
+
+  font-size: 14px;
+
+  color: var(--color-muted);
 }
 
-.product-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  margin-bottom: 0;
-  padding: var(--space-md);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background-color: var(--color-bg);
+.breadcrumbs a {
+  color: var(--color-primary);
 }
 
-.product-card .button {
-  margin-top: auto;
-  align-self: flex-start;
+.breadcrumbs span::before {
+  content: " / ";
+
+  color: var(--color-muted);
+}
+html {
+  scroll-behavior: smooth;
+}
+:target {
+  outline: 2px dashed var(--color-primary);
+
+  outline-offset: 4px;
 }
